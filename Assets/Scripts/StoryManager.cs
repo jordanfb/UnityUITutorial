@@ -20,6 +20,11 @@ public class StoryManager : MonoBehaviour {
      * 
      * Skills are: Hearts, Smarts, Charm, Money, Fun, Boldness, Creativity
      * Money, Sloth, Strength, Public Service, Stupidity, ???
+     * house car park store office hospital sewers
+     * Money (office, store), Sloth (car, house), Strength (sewers, store), Fun (park, sewers), 
+     * Fruit (store, park), Disease (hospital, office, sewers), Sleep (house)
+     * Money Sloth Strength Fun Fruit Disease Sleep
+     * 
      * because why not.
      */
 
@@ -44,6 +49,7 @@ public class StoryManager : MonoBehaviour {
     int daysLeft;
     List<Character> seenCharacters; // the characters the player has seen at all
     int[] playerStats; // the player stats all start at 0.
+    Location currentLocation; // this gets set every day
 
     // getters and setters
     public int NumDaysPerGame
@@ -120,8 +126,157 @@ public class StoryManager : MonoBehaviour {
         }
 	}
 
+    public void SetUpStartGameGUI()
+    {
+        // this hides all the GUI except for the name and start button, which it shows :P
+        ResetGame(); // start a new game
+
+        // HERE
+    }
+
+    public void StartGame()
+    {
+        // this hides the start game GUI
+
+        // HERE
+
+        // then goes to the select location stuff
+        StartDay();
+    }
+
+    public void StartDay()
+    {
+        // this loads up the select a location GUI, which is just a bunch of buttons with location names, when the cursor hovers over them you should call
+        // ClickOnLocation so that the camera moves.
+
+        // HERE
+    }
+
+    public void ClickOnLocation(Location loc)
+    {
+        // when you click on a location (or perhaps just hover your mouse over the button thing?) the camera moves to face the location. Because why not.
+        // this function is finished, it's just the monobehavior that calls this function that isn't
+        LookAtLocation(loc.worldLocationEnumValue);
+
+        // this is where we should add the world UI above the buildings! Yeah! It's not actually here in the code, it's in the scene, but the idea holds true.
+        // HERE
+    }
+
+    public void SelectLocation(Location loc)
+    {
+        // when you select a location to go to, this function gets called.
+        // When this function is called we hide the UI for selecting locations
+
+        // HERE
+
+        // we then go to the UI for the location, intializing it for that location.
+        currentLocation = loc;
+        // we also initialize the UI for that location.
+        // Here we'll be creating the UI from scratch to show how you can set the text and the images and whatever.
+        // We'll probably pass the loc to the monobehavior responsible then create it in code over there.
+        Character randCharacter = GetRandomCharacter(loc.worldLocationEnumValue);
+        bool seenBefore = seenCharacters.Contains(randCharacter);
+        if (!seenBefore)
+            seenCharacters.Add(randCharacter);
+        // Create the character text
+        string locationText = loc.locationName;
+        string eventText = randCharacter.RandomEventText(loc, seenBefore, playerName);
+        // create a window with the location name, the event, and then a "Next Day" button. Given time I'd love to add a choice here, but who has time?
+
+        // HERE
+    }
+
+    public void EndOfDay()
+    {
+        // this is called when we leave the Location. This is when we update our stats (and consequently the UI).
+        currentLocation.UpdateStatList(playerStats);
+        UpdateStatsUI();
+        // then we hide the UI for the location
+
+        // HERE
+
+        // then we update the day count
+        daysLeft--;
+        if (daysLeft == 0)
+        {
+            // then it's time to ask someone to hang out!
+            SetUpAsking();
+        } else
+        {
+            // otherwise go back to the location select screen
+            StartDay();
+        }
+    }
+
+    public void UpdateStatsUI()
+    {
+        // here we should update the stats for the player in the top right corner.
+        // We'll actually sorta convolutedly do this in a IMGUI way
+
+        // HERE
+    }
+    
+    public void SetUpAsking()
+    {
+        // this sets up the ask someone UI with all the characters that we've met (stored in seenCharacters).
+        // this is where we show off lists and lists made programatically.
+
+        for (int i = 0; i < seenCharacters.Count; i++)
+        {
+            Character curr = seenCharacters[i];
+            // create a display object that allows you to select the characters.
+            // perhaps add the listener to the click programatically?
+            // make sure to add them to a list of UI items so you can delete them.
+
+            // HERE
+        }
+    }
+
+    public void AskCharacter(Character character)
+    {
+        // this is when we ask someone to hang out!
+        // if the character likes your stats, then you get a happy ending! If not, you get a sad ending :(
+        // this is basically just a text screen plus a button to start a new game. If you click that then you get the start game function, which sets up the player name
+        // entry!
+        string resultText = "";
+        if (character.EvaluateStats(playerStats))
+        {
+            // then you get the win text!
+            resultText = character.yesText;
+        } else
+        {
+            // then you get the :( text
+            resultText = character.noText;
+        }
+
+        // set the result in a text box and have a button that lets you start again
+        // HERE
+    }
+
+    Character GetRandomCharacter(worldLocations loc)
+    {
+        // get a random character that spawns at that location
+        // if no character spawns then make the game better, you managed to break it
+        List<Character> possible = new List<Character>();
+        for (int i = 0; i < characters.Count; i++)
+        {
+            worldLocations[] locs = characters[i].spawnLocations;
+            for (int j = 0; j < locs.Length; j++)
+            {
+                if (locs[i] == loc)
+                {
+                    // then they're a possible character
+                    possible.Add(characters[i]);
+                    break; // stop checking this character we know they're possible.
+                }
+            }
+
+        }
+        return possible[Random.Range(0, possible.Count)]; // return a random character
+    }
+
     public enum worldLocations
     {
-        CAR, HOSPITAL, HOUSE, PARK, STORE, OFFICE, SEWER
+        CAR, HOSPITAL, HOUSE, PARK, STORE, OFFICE, SEWER, ALL // the all is for the event text stuff
     }
 }

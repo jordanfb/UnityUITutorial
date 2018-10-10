@@ -5390,6 +5390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f42b6a629ece954a8a768f8db376ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointCamera: {fileID: 534669906}
   locations:
   - {fileID: 11400000, guid: 33a33cd75d35c5c45aa8bbaeb18dc3d5, type: 2}
   - {fileID: 11400000, guid: 4d3c8785638b4f2449475e65fa3a1951, type: 2}
@@ -5406,34 +5407,21 @@ MonoBehaviour:
   - {fileID: 884231665}
   - {fileID: 833631803}
   - {fileID: 1392435942}
-  characterNames:
-  - Samantha
-  - John
-  - Little Bobby
-  - Twiz
-  - Tickle-Me-Elmo
-  - your best friend
-  - Nina
-  - Dr. Horrible
-  - Chase
-  - Kayden
-  - Elizabeth
-  - Amy
-  characterDescriptions:
-  - She seems pretty chill
-  - He looks like he lifts
-  - He's seven years old and just lost a tooth, see?
-  - I think the nickname is from the candy?
-  - He's well hugged but the battery's still working.
-  - You've known them since forever!
-  - My middle school music teacher!
-  - He has some sort of blog thing?
-  - Coming live from his bank auditorium in downtown Chicago, it's Peter Sagel!
-  - She may or may not have super-powers.
-  - Unrelated to the queen.
-  - Has caused several incidents.
-  characterPositions: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  pointCamera: {fileID: 534669906}
+  characters:
+  - {fileID: 11400000, guid: a663375e94c4e7f4981b1f02b4c4d893, type: 2}
+  - {fileID: 11400000, guid: 7a4a4331eb537a147917cf92d38f1250, type: 2}
+  - {fileID: 11400000, guid: f85d34c99f183124abb5343fa8b641b2, type: 2}
+  - {fileID: 11400000, guid: e985d3e6548c504468559b13c0797031, type: 2}
+  - {fileID: 11400000, guid: 1761baf8246e16f4e999d4e9c1d3c72c, type: 2}
+  - {fileID: 11400000, guid: 5acd2dc3fda568d4e8cbfa6b05635785, type: 2}
+  - {fileID: 11400000, guid: 09469277b3813c043b5869f71c1060c1, type: 2}
+  - {fileID: 11400000, guid: 8037d4d9a70939d4cb18d6210aaca8ee, type: 2}
+  - {fileID: 11400000, guid: a637615d33d6fe64ba16b1ea4a7cdab3, type: 2}
+  - {fileID: 11400000, guid: 5f5f14ff771485143a14f56b6ec53ae5, type: 2}
+  - {fileID: 11400000, guid: 08d55089590168141984648d2e640ed8, type: 2}
+  - {fileID: 11400000, guid: 32771955c9f015c4199939b08d453b0b, type: 2}
+  - {fileID: 11400000, guid: 293b1e93e4a89e34e978fc086bcd46b8, type: 2}
+  - {fileID: 11400000, guid: 11adc547b7665aa45929287bdc84c1de, type: 2}
 --- !u!4 &1677529389
 Transform:
   m_ObjectHideFlags: 0

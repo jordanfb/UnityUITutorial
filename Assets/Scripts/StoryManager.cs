@@ -263,7 +263,7 @@ public class StoryManager : MonoBehaviour {
             worldLocations[] locs = characters[i].spawnLocations;
             for (int j = 0; j < locs.Length; j++)
             {
-                if (locs[i] == loc)
+                if (locs[i] == loc || locs[i] == worldLocations.ALL)
                 {
                     // then they're a possible character
                     possible.Add(characters[i]);

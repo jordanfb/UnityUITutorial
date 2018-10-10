@@ -12,7 +12,29 @@ MonoBehaviour:
   m_Name: Twiz
   m_EditorClassIdentifier: 
   characterName: Twiz
+  introductionText: You see a rad mad lad zooming down the street on his Heelys. This
+    seems like a mood dude who'd make a good addition to your clique. "What's up?"
+    you ask him. "Not much. Twiz?" He offers you a Twizzler from a bag he seemingly
+    pulled from nowhere. You take one. Twizzlers are yummy.
   description: I think the nickname is from the candy?
-  events: []
+  spawnLocations: 000000000600000004000000
+  events:
+  - '"Twiz?" Your friend Twiz offers you a Twizzler. You take it. Twizzlers are yummy.'
+  - '"Twiz???" Your friend comes into the store, staring at his hands in confusion.
+    You quickly nab a new bag of Twizzlers from the shelf nearby and stick them into
+    his hands. "Twiz" he says, contentedly.'
+  - '"Twiz!" Your friend skates by on his Heelys as he is wont to do. Life is good.'
+  - '"Twiz!" Your friend skates by on his Heelys as he is wont to do. Life is good.'
+  eventLocations: 07000000040000000000000006000000
   likes: []
   dislikes: []
+  yesText: 'You ask him if he wants to hang out sometime. "Twizzz!" he says, enthusiastically.
+
+
+    Congratulations!'
+  noText: '"Yo Twiz, you want to hang out sometime?" You ask. "Dude, my name isn''t
+    ''Twiz,'' it''s Jasper. I''ve told you like five times already, get it in that
+    thick skull of yours." Twiz walks away in disgust.
+
+
+    Better luck next time!'

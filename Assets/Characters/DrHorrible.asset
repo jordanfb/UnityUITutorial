@@ -12,7 +12,36 @@ MonoBehaviour:
   m_Name: DrHorrible
   m_EditorClassIdentifier: 
   characterName: Dr. Horrible
+  introductionText: You see a man in a white trench coat with large black welding
+    goggles and black rubber gloves. He is singing some sort of song about doing the
+    things he needs to do. You are confused but walk up and introduce yourself anyways.
+    "Hello! I'm [pname]." "Hello! I'm Dr. Horrible" he says back. A friendship has
+    been born.
   description: He has some sort of blog thing?
-  events: []
-  likes: []
-  dislikes: []
+  spawnLocations: 
+  events:
+  - Hey look it's Dr. Horrible singing some song! Sweet!
+  eventLocations: 07000000
+  likes:
+  - 0
+  - 0
+  - 4
+  - 0
+  - 0
+  - 0
+  - 0
+  dislikes:
+  - 100000
+  - 100000
+  - 100000
+  - 100000
+  - 100000
+  - 7
+  - 100000
+  yesText: "You use your freeze ray to stop the world and ask him on a date! He says
+    yes!\n\nCongratulations!\t"
+  noText: 'You try to use a freeze ray to pause time but it ends up exploding in your
+    hands. Not a great look buddy.
+
+
+    Try again?'

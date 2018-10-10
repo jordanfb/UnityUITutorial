@@ -12,9 +12,50 @@ MonoBehaviour:
   m_Name: Amy
   m_EditorClassIdentifier: 
   characterName: Amy
+  introductionText: You see someone you haven't met before! "Hello!, I'm [pname]"
+    you say! She introduces herself as Amy. "Nice to meet you!" You both say at once,
+    causing nervous laughter from both of you. Amy gives the bag back to the old woman
+    nearby. You can tell that you'll be great friends.
   description: Has caused several incidents.
-  events: []
-  likes: []
-  dislikes: []
-  yesText: 
-  noText: 
+  spawnLocations: 00000000040000000500000002000000
+  events:
+  - Oops! You ran into someone at the store. Good thing it's your friend Amy! You
+    both laugh nervously. Amy quickly leaves the store with her suspiciously buldging
+    coat. Your friendship is strengthened even more with yet another crazy collision.
+  - Oops! You ran into someone at your car. Good thing it was your friend Amy! You
+    both laugh nervously. She removes the slim jim from your car door and heads off
+    down the street. Wow. You keep colliding with Amy! It's crazy!
+  - Oops! You ran into someone at your office. Good thing it was your friend Amy.
+    You both laugh nervously. Amy drops three staplers and a pack of post-it-notes
+    on the ground as she leaves. What a crazy coincidence running into Amy again!
+  - Oops! You ran into someone at your house. Good thing it was your friend Amy. You
+    both laugh nervously. Amy takes off her ski mask and starts walking down the street,
+    whistling all the way. Huh, why do you keep on colliding with Amy?
+  eventLocations: 04000000000000000500000002000000
+  likes:
+  - 10
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  dislikes:
+  - 1000000
+  - 1000000
+  - 5
+  - 1000000
+  - 1000000
+  - 1000000
+  - 1000000
+  yesText: 'Oops! You ran into Amy again! This time you wanted to ask her out though.
+    She says yes, eyeing your spiffy outfit and shiny watch!
+
+
+    Congratulations!'
+  noText: 'Oops! You ran into Amy again! This time you wanted to ask her out though.
+    "Sorry [pname], you just aren''t the one for me." Amy walks away with your car
+    keys and watch.
+
+
+    Better luck next time!'

@@ -12,7 +12,24 @@ MonoBehaviour:
   m_Name: Elizabeth
   m_EditorClassIdentifier: 
   characterName: Elizabeth
+  introductionText: As you walk over to [locname], you see a queenly old woman walk
+    by with a trail of handlers. You decide to introduce yourself. As you walk over,
+    a man scans you with a metal detector before you can get too close. "My name is
+    [pname]!" You say. She smiles back and introduces herself as Elizabeth.
   description: Unrelated to the queen.
+  spawnLocations: 
   events: []
+  eventLocations: 
   likes: []
   dislikes: []
+  yesText: 'You ask her to marry you and she says yes. There''s all sorts of ceremony
+    and someone got you a cool hat but Elizabeth told you not to worry about it so
+    all is good.
+
+
+    Congratulations!'
+  noText: 'You ask for her hand in marrige, but she turns you down, citing your lack
+    of dukedom.
+
+
+    Better luck next time!'

@@ -12,7 +12,21 @@ MonoBehaviour:
   m_Name: Samantha
   m_EditorClassIdentifier: 
   characterName: Samantha
+  introductionText: You see a woman you've never met before hanging out. She comes
+    over and introduces herself. "Hey, I'm Samantha." She seems pretty chill.
   description: She seems pretty chill.
+  spawnLocations: 
   events: []
+  eventLocations: 
   likes: []
   dislikes: []
+  yesText: 'You ask her if she wants to hang and do nothing much for a while. She
+    says it sounds like a good time.
+
+
+    Congratulations!'
+  noText: 'You ask her if she wants to go and see a movie. "Not my scene" she says,
+    and turns away. You feel a profound sense of disappointment.
+
+
+    Better luck next time!'

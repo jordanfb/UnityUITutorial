@@ -12,7 +12,38 @@ MonoBehaviour:
   m_Name: bestFriend
   m_EditorClassIdentifier: 
   characterName: your best friend
+  introductionText: Look! It's your best friend! You've been friends since, like,
+    forever!
   description: You've known them since, like, forever!
-  events: []
-  likes: []
-  dislikes: []
+  spawnLocations: 00000000020000000100000003000000
+  events:
+  - It's your best friend!
+  - Your best friend is over! You have a great day doing best friend things.
+  - As you walk into the hospital room you see your best friend in one of the beds.
+    "Hey best friend, how're you doing?" You ask. "Not great..." they reply.
+  eventLocations: 070000000200000001000000
+  likes:
+  - 0
+  - 3
+  - 0
+  - 5
+  - 0
+  - 0
+  - 0
+  dislikes:
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  yesText: '"Who needs friends when we have relationships! Let''s do this thing!"
+    your best friend, excuse me, best partner, says.
+
+
+    Congratulations!'
+  noText: '"I''m sorry," your best friend says. "I think we''re better off as friends..."
+
+
+    Better luck next time!'

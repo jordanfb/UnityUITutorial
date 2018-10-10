@@ -12,8 +12,46 @@ MonoBehaviour:
   m_Name: Reaper
   m_EditorClassIdentifier: 
   characterName: The Grim Reaper
+  introductionText: 'An ominous black figure stands there, the personification of
+    death itself, with his dark, coweled cloak and razer sharp scythe.
+
+
+    You walk over and say hello!'
   description: He stands there, the personification of death itself, with his dark,
     coweled cloak and ominious scythe.
-  events: []
-  likes: []
-  dislikes: []
+  spawnLocations: 01000000
+  events:
+  - You wander over and see the grim reaper standing over a newly deceased body. You
+    thought that the scythe was used more metaphorically for harvesting but apparently
+    it's quite necessary.
+  - You look around and catch someone staring at you from the hospital gift shop.
+    It's the grim reaper.
+  eventLocations: 0100000001000000
+  likes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 10
+  - 0
+  dislikes:
+  - 100000
+  - 100000
+  - 3
+  - 100000
+  - 10
+  - 100000
+  - 5
+  yesText: 'You head over to ask the Grim Reaper if he wants to hang out but find
+    that he''s already next to you. Staring at you. Ominously lurking over you. "It
+    is Time" he says. You were planning on seeing if he was free on Tuesday but you''re
+    free now too!
+
+
+    Congratulations!'
+  noText: 'You ask the Grim Reaper if he wanted to do something together and he says
+    in a raspy voice "Not Yet."
+
+
+    Better luck next time!'

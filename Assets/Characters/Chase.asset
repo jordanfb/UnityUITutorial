@@ -12,7 +12,39 @@ MonoBehaviour:
   m_Name: Chase
   m_EditorClassIdentifier: 
   characterName: Chase
+  introductionText: You encounter someone you haven't met before! It's Chase! The
+    loveable, bank-related name that I came up with! You can tell that I'm loosing
+    steam!
   description: Coming live from his auditorium in downtown Chicago, it's Peter Sagal!
-  events: []
-  likes: []
-  dislikes: []
+  spawnLocations: 0400000005000000
+  events:
+  - '"Hey [pname]!" You hear someone shouting "It''s me! Chase!" Ah, Chase is shouting,
+    from the steps of the bank next door! You go and hang out with him for a while!
+    What a great day!'
+  eventLocations: 07000000
+  likes:
+  - 3
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 3
+  dislikes:
+  - 100000
+  - 5
+  - 1000000
+  - 100000
+  - 1000000
+  - 100000
+  - 100000
+  yesText: 'You ask Chase out to dinner and an ATM, and he happily says yes! You live
+    a long and happy and bank-related life together.
+
+
+    Congratulations on your newfound happiness!'
+  noText: 'You ask Chase out to dinner and a movie but he begs off, saying that he''s
+    busy that night. In the narrow scope of this game that means you loose...
+
+
+    Better luck next time!'

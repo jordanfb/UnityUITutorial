@@ -12,7 +12,28 @@ MonoBehaviour:
   m_Name: Nobody
   m_EditorClassIdentifier: 
   characterName: Nobody
+  introductionText: Nobody's there.
   description: There's nobody there.
-  events: []
-  likes: []
-  dislikes: []
+  spawnLocations: 07000000
+  events:
+  - The wind whistles through. A tumbleweed rolls past. Nobody's here.
+  - You say hello to the room and Nobody answers.
+  eventLocations: 0700000002000000
+  likes:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  dislikes:
+  - 100000
+  - 100000
+  - 100000
+  - 100000
+  - 100000
+  - 100000
+  - 100000
+  yesText: Nobody says yes.
+  noText: Nobody says no.

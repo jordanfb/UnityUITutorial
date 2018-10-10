@@ -27,6 +27,8 @@ public class PointCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         lerpTime += Time.deltaTime / time;
-        transform.rotation = Quaternion.Lerp(startLoc, goalLoc, lerpTime / time);
+        // this is using the "smootherstep" from https://chicounity3d.wordpress.com/2014/05/23/how-to-lerp-like-a-pro/
+        float t = lerpTime * lerpTime * lerpTime * (lerpTime * (6f * lerpTime - 15f) + 10f);
+        transform.rotation = Quaternion.Lerp(startLoc, goalLoc, t);
 	}
 }

@@ -5244,6 +5244,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f42b6a629ece954a8a768f8db376ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worldPositionNames:
+  - Your House
+  - The Park
+  - The Hospital
+  - The Office
+  - The Store
+  - Your Car
   worldPositions:
   - {fileID: 587397665}
   - {fileID: 894433973}
@@ -5251,6 +5258,34 @@ MonoBehaviour:
   - {fileID: 1460241266}
   - {fileID: 884231665}
   - {fileID: 833631803}
+  worldEnums: 020000000300000001000000050000000400000000000000
+  characterNames:
+  - Samantha
+  - John
+  - Little Bobby
+  - Twiz
+  - Tickle-Me-Elmo
+  - your best friend
+  - Nina
+  - Dr. Horrible
+  - Chase
+  - Kayden
+  - Elizabeth
+  - Amy
+  characterDescriptions:
+  - She seems pretty chill
+  - He looks like he lifts
+  - He's seven years old and just lost a tooth, see?
+  - I think the nickname is from the candy?
+  - He's well hugged but the battery's still working.
+  - You've known them since forever!
+  - My middle school music teacher!
+  - He has some sort of blog thing?
+  - Coming live from his bank auditorium in downtown Chicago, it's Peter Sagel!
+  - She may or may not have super-powers.
+  - Unrelated to the queen.
+  - Has caused several incidents.
+  characterPositions: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   pointCamera: {fileID: 534669906}
 --- !u!4 &1677529389
 Transform:

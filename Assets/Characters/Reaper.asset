@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726d447b83ab76d4199022f1cffc79a6, type: 3}
+  m_Name: Reaper
+  m_EditorClassIdentifier: 
+  characterName: The Grim Reaper
+  description: He stands there, the personification of death itself, with his dark,
+    coweled cloak and ominious scythe.
+  events: []
+  likes: []
+  dislikes: []

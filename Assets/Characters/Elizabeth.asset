@@ -17,11 +17,29 @@ MonoBehaviour:
     a man scans you with a metal detector before you can get too close. "My name is
     [pname]!" You say. She smiles back and introduces herself as Elizabeth.
   description: Unrelated to the queen.
-  spawnLocations: 
-  events: []
-  eventLocations: 
-  likes: []
-  dislikes: []
+  spawnLocations: 0000000006000000
+  events:
+  - Look it's Elizabeth! She's in some sort of car driving past waving at you with
+    one of those princess waves!
+  - Look it's Elizabeth! She's in some sort of car driving past waving at you with
+    one of those princess waves!
+  eventLocations: 0000000006000000
+  likes:
+  - 0
+  - 0
+  - 5
+  - 0
+  - 2
+  - 0
+  - 0
+  dislikes:
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  - 10000
+  - 10000
   yesText: 'You ask her to marry you and she says yes. There''s all sorts of ceremony
     and someone got you a cool hat but Elizabeth told you not to worry about it so
     all is good.

@@ -30,6 +30,8 @@ public class StoryManager : MonoBehaviour {
      */
 
     [SerializeField]
+    private StatsUI statsUI;
+    [SerializeField]
     private GameObject startGameUIParent;
     [SerializeField]
     private GameObject locationSelectUI;
@@ -125,6 +127,8 @@ public class StoryManager : MonoBehaviour {
         playerStats = new int[7];
         seenCharacters = new List<Character>();
         daysLeft = NumDaysPerGame;
+        statsUI.SetStats(playerStats);
+        statsUI.HideStats();
         locationSelectUI.SetActive(false);
         dayEventParent.SetActive(false);
         finalDayUIParent.SetActive(false);
@@ -179,6 +183,7 @@ public class StoryManager : MonoBehaviour {
         // this hides the start game GUI
 
         // HERE
+        statsUI.ShowStats();
 
         // then goes to the select location stuff
         StartDay();
@@ -261,6 +266,7 @@ public void ClickOnLocation(Location loc)
         // We'll actually sorta convolutedly do this in a IMGUI way
 
         // HERE
+        statsUI.SetStats(playerStats);
     }
     
     public void SetUpAsking()
@@ -300,7 +306,7 @@ public void ClickOnLocation(Location loc)
             // then you get the :( text
             resultText = character.noText;
         }
-
+        resultText = resultText.Replace("[pname]", PlayerName);
         // set the result in a text box and have a button that lets you start again
         // HERE
         finalDayUIParent.SetActive(false); // hide the previous day's UI

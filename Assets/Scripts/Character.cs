@@ -14,6 +14,7 @@ public class Character : ScriptableObject {
 
     [Space]
     [Header("Events")]
+    [TextArea]
     public string[] events;
     public StoryManager.worldLocations[] eventLocations; // where those events can happen
 
@@ -53,6 +54,8 @@ public class Character : ScriptableObject {
         {
             if (eventLocations[i] == StoryManager.worldLocations.ALL || eventLocations[i] == loc.worldLocationEnumValue)
             {
+                Debug.Log(events[i]);
+                Debug.Log(eventLocations[i] + " is valid @ location " + loc.worldLocationEnumValue);
                 possible.Add(events[i]);
             }
 
@@ -76,7 +79,7 @@ public class Character : ScriptableObject {
         {
             // I'm using this replacement method for the character here as well because IDK. We could probably just write in the character name...
             // I'll think about this...
-            output = events[Random.Range(0, events.Length)].Replace("[pname]", playerName).Replace("[cname]", characterName).Replace("[locname]", loc.locationName);
+            output = GetValidTextForLoc(loc).Replace("[pname]", playerName).Replace("[cname]", characterName).Replace("[locname]", loc.locationName);
         }
         return output;
     }

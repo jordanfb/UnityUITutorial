@@ -13,5 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: Your House
   locationDescription: 
-  skillChances: []
+  skillChances:
+  - {x: 0, y: 0}
+  - {x: 2, y: 4}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 4, y: 7}
+  cameraTarget: {x: -2.97, y: 1.73, z: -0.68}
+  locationPicture: {fileID: 0}
   worldLocationEnumValue: 2

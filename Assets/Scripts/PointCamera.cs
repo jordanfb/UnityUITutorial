@@ -9,6 +9,7 @@ public class PointCamera : MonoBehaviour {
     private float lerpTime = 0;
     [SerializeField]
     private float time = 1;
+    private Vector3 goalPos;
 
     // Use this for initialization
     void Start () {
@@ -18,6 +19,11 @@ public class PointCamera : MonoBehaviour {
     public void SetTarget(Vector3 pos)
     {
         // aim the camera at the pos
+        if (pos == goalPos)
+        {
+            return; // don't set it because you're already heading there
+        }
+        goalPos = pos;
         startLoc = transform.rotation;
         Vector3 dpos = pos - transform.position;
         goalLoc = Quaternion.LookRotation(dpos, Vector3.up);

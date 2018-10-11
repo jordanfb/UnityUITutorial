@@ -65,7 +65,8 @@ public class Character : ScriptableObject {
         string output = "";
         if (!seenBefore)
         {
-            output = introductionText.Replace("[pname]", playerName); // "You catch sight of someone you've never seen before: " + characterName + ". " + description;
+            output = introductionText.Replace("[pname]", playerName).Replace("[locname]", loc.locationName);
+            // "You catch sight of someone you've never seen before: " + characterName + ". " + description;
             // move the description into the intro text for now and just don't use it. This is pivoting folks!
             // Given time I'd love to make it so you also respond to the event by choosing between two options, but I don't have time to write that dialog :P
             // If I were doing that I'd make a class that stores the event text, the option A text, the option B text, and the results for those two choices
@@ -75,7 +76,7 @@ public class Character : ScriptableObject {
         {
             // I'm using this replacement method for the character here as well because IDK. We could probably just write in the character name...
             // I'll think about this...
-            output = events[Random.Range(0, events.Length)].Replace("[pname]", playerName).Replace("[cname]", characterName);
+            output = events[Random.Range(0, events.Length)].Replace("[pname]", playerName).Replace("[cname]", characterName).Replace("[locname]", loc.locationName);
         }
         return output;
     }

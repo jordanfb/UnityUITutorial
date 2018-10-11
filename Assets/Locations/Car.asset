@@ -15,11 +15,12 @@ MonoBehaviour:
   locationDescription: 
   skillChances:
   - {x: 0, y: 0}
+  - {x: 1, y: 3}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
   - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  - {x: 0, y: 0}
-  cameraTarget: {x: 0, y: 0, z: 0}
+  - {x: 1, y: 3}
+  cameraTarget: {x: -0.73, y: 0.462, z: -0.221}
+  locationPicture: {fileID: 0}
   worldLocationEnumValue: 0

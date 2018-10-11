@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour {
 
@@ -28,6 +29,35 @@ public class StoryManager : MonoBehaviour {
      * because why not.
      */
 
+    [SerializeField]
+    private GameObject startGameUIParent;
+    [SerializeField]
+    private GameObject locationSelectUI;
+    [SerializeField]
+    private Text dayEventText;
+    [SerializeField]
+    private Text dayLocationText;
+    [SerializeField]
+    private GameObject dayEventParent;
+
+    [Space]
+    [Header("Final day UI")]
+    [SerializeField]
+    private GameObject finalDayUIParent;
+    [SerializeField]
+    private GameObject askCharacterButtonPrefab;
+    [SerializeField]
+    private Transform askCharacterButtonParent;
+    private List<GameObject> askButtons = new List<GameObject>();
+
+    [Space]
+    [Header("Result UI")]
+    [SerializeField]
+    private GameObject resultUIParent;
+    [SerializeField]
+    private Text resultTextUI;
+
+    [Space]
     [SerializeField]
     PointCamera pointCamera;
 
@@ -95,6 +125,16 @@ public class StoryManager : MonoBehaviour {
         playerStats = new int[7];
         seenCharacters = new List<Character>();
         daysLeft = NumDaysPerGame;
+        locationSelectUI.SetActive(false);
+        dayEventParent.SetActive(false);
+        finalDayUIParent.SetActive(false);
+        resultUIParent.SetActive(false);
+        startGameUIParent.SetActive(true);
+        foreach (GameObject go in askButtons)
+        {
+            Destroy(go);
+        }
+        askButtons = new List<GameObject>();
     }
 
     public void LookAtLocation(worldLocations loc)
@@ -149,10 +189,11 @@ public class StoryManager : MonoBehaviour {
         // this loads up the select a location GUI, which is just a bunch of buttons with location names, when the cursor hovers over them you should call
         // ClickOnLocation so that the camera moves.
 
-        // HERE
+        locationSelectUI.SetActive(true);
+
     }
 
-    public void ClickOnLocation(Location loc)
+public void ClickOnLocation(Location loc)
     {
         // when you click on a location (or perhaps just hover your mouse over the button thing?) the camera moves to face the location. Because why not.
         // this function is finished, it's just the monobehavior that calls this function that isn't
@@ -168,6 +209,7 @@ public class StoryManager : MonoBehaviour {
         // When this function is called we hide the UI for selecting locations
 
         // HERE
+        locationSelectUI.SetActive(false);
 
         // we then go to the UI for the location, intializing it for that location.
         currentLocation = loc;
@@ -184,6 +226,10 @@ public class StoryManager : MonoBehaviour {
         // create a window with the location name, the event, and then a "Next Day" button. Given time I'd love to add a choice here, but who has time?
 
         // HERE
+        dayEventParent.SetActive(true);
+        dayEventText.text = eventText;
+        dayLocationText.text = locationText;
+
     }
 
     public void EndOfDay()
@@ -194,6 +240,7 @@ public class StoryManager : MonoBehaviour {
         // then we hide the UI for the location
 
         // HERE
+        dayEventParent.SetActive(false);
 
         // then we update the day count
         daysLeft--;
@@ -221,6 +268,8 @@ public class StoryManager : MonoBehaviour {
         // this sets up the ask someone UI with all the characters that we've met (stored in seenCharacters).
         // this is where we show off lists and lists made programatically.
 
+        finalDayUIParent.SetActive(true);
+
         for (int i = 0; i < seenCharacters.Count; i++)
         {
             Character curr = seenCharacters[i];
@@ -229,6 +278,9 @@ public class StoryManager : MonoBehaviour {
             // make sure to add them to a list of UI items so you can delete them.
 
             // HERE
+            GameObject go = Instantiate(askCharacterButtonPrefab, askCharacterButtonParent);
+            go.GetComponent<DateChoiceButtonManager>().SetCharacter(curr, this);
+            askButtons.Add(go);
         }
     }
 
@@ -251,6 +303,15 @@ public class StoryManager : MonoBehaviour {
 
         // set the result in a text box and have a button that lets you start again
         // HERE
+        finalDayUIParent.SetActive(false); // hide the previous day's UI
+
+        resultUIParent.SetActive(true);
+        resultTextUI.text = resultText;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     Character GetRandomCharacter(worldLocations loc)
@@ -263,7 +324,7 @@ public class StoryManager : MonoBehaviour {
             worldLocations[] locs = characters[i].spawnLocations;
             for (int j = 0; j < locs.Length; j++)
             {
-                if (locs[i] == loc || locs[i] == worldLocations.ALL)
+                if (locs[j] == loc || locs[j] == worldLocations.ALL)
                 {
                     // then they're a possible character
                     possible.Add(characters[i]);

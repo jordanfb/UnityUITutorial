@@ -13,5 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: The Park
   locationDescription: 
-  skillChances: []
+  skillChances:
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 4, y: 7}
+  - {x: 0, y: 2}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  cameraTarget: {x: 1.06, y: 0.642, z: -0.89}
+  locationPicture: {fileID: 0}
   worldLocationEnumValue: 3

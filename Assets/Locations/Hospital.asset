@@ -13,5 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationName: The Hospital
   locationDescription: 
-  skillChances: []
+  skillChances:
+  - {x: 0, y: 2}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 0, y: 0}
+  - {x: 3, y: 8}
+  - {x: 0, y: 2}
+  cameraTarget: {x: 3.02, y: 2.19, z: 2.76}
+  locationPicture: {fileID: 0}
   worldLocationEnumValue: 1
